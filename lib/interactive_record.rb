@@ -49,7 +49,7 @@ class InteractiveRecord
 
   def self.find_by(attributes)
     sql = "SELECT * FROM #{self.table_name} WHERE '#{attributes.keys}' =?"
-    # binding.pry
+    binding.pry
     DB[:conn].execute(sql)
   end
 
